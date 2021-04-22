@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Arm架构ubuntu18.04安装Archiconda |  Dream
+    Arm架构ubuntu18.04安装Archiconda &amp; conda命令 |  Dream
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -62,7 +62,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Arm架构ubuntu18.04安装Archiconda
+  Arm架构ubuntu18.04安装Archiconda &amp; conda命令
 </h1>
  
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">125</span>
+            <span class="post-count">237</span>
         </span>
     </span>
 
@@ -113,7 +113,24 @@
 <p>过程中按问题选择即可，以下为安装成功截图</p>
 <img src="/2021/04/22/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Arm%E6%9E%B6%E6%9E%84ubuntu18-04%E5%AE%89%E8%A3%85Archiconda/01.jpg" class="" title="This is an image">
 
-<h2 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h2> 
+<h2 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure>
+<h1 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h1><ol>
+<li>环境操作</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建环境</span></span><br><span class="line">conda create --name env_name python=2.7</span><br><span class="line">conda create --name env_name python=3</span><br><span class="line">conda create --name env_name python=3.5</span><br><span class="line"></span><br><span class="line">conda create --name your_env_name python=3.5 numpy scipy</span><br><span class="line"></span><br><span class="line"><span class="comment">#列举环境</span></span><br><span class="line">conda env list</span><br><span class="line"></span><br><span class="line"><span class="comment">#进入环境</span></span><br><span class="line">activate your_env_name</span><br><span class="line"></span><br><span class="line"><span class="comment">#退出环境</span></span><br><span class="line">deactivate</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除环境</span></span><br><span class="line">conda remove --name your_env_name --all</span><br><span class="line"></span><br><span class="line"><span class="comment">#复制环境</span></span><br><span class="line">conda create --name new_env_name --<span class="built_in">clone</span> old_env_name </span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>环境中的包</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda list</span><br><span class="line"><span class="comment">#列举某一个环境中的包</span></span><br><span class="line">conda list -n your_env_name</span><br><span class="line"></span><br><span class="line"><span class="comment">#为某一个环境安装包</span></span><br><span class="line">conda install -n env_name package_name</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+ 
       <!-- reward -->
       
     </div>
