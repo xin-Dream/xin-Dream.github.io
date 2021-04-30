@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    ubuntu中安装常用软件及简单配置 |  Dream
+    ubuntu20.04系统重装配置 |  Dream
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -51,7 +51,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-操作系统/ubuntu中安装常用软件及简单配置"
+  id="post-操作系统/ubuntu20-04系统重装配置"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -62,7 +62,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  ubuntu中安装常用软件及简单配置
+  ubuntu20.04系统重装配置
 </h1>
  
 
@@ -70,8 +70,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/01/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ubuntu%E4%B8%AD%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8F%8A%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2021-01-28T14:04:42.000Z" itemprop="datePublished">2021-01-28</time>
+      <a href="/2021/04/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ubuntu20-04%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2021-04-29T15:58:55.000Z" itemprop="datePublished">2021-04-29</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a> / <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ubuntu/">ubuntu</a>
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">556</span>
+            <span class="post-count">297</span>
         </span>
     </span>
 
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -106,8 +106,12 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="设置sudo-免密码"><a href="#设置sudo-免密码" class="headerlink" title="设置sudo 免密码"></a>设置sudo 免密码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/sudoers</span><br><span class="line"><span class="comment">#修改:%sudo ALL=(ALL:ALL) ALL</span></span><br><span class="line">%sudo ALL=(ALL) NOPASSWD:ALL</span><br><span class="line"><span class="comment">#wq!   强制保存后退出</span></span><br></pre></td></tr></table></figure>
-<h2 id="双系统时间不统一"><a href="#双系统时间不统一" class="headerlink" title="双系统时间不统一"></a>双系统时间不统一</h2><p>参考<a target="_blank" rel="noopener" href="https://juejin.im/post/5eb3a1556fb9a0434b73545c#heading-31">写给工程师的ubuntu20.04的最佳配置指南</a></p>
+  <h1 id="1-安装WIFI"><a href="#1-安装WIFI" class="headerlink" title="1. 安装WIFI"></a>1. 安装WIFI</h1><p>可以在 software&amp;updates -&gt; Additional Drivers里选择合适的显卡驱动和WIFI驱动<br>若没有WIFI驱动，可以先换源</p>
+<h1 id="2-修改启动时系统选择等待时间"><a href="#2-修改启动时系统选择等待时间" class="headerlink" title="2. 修改启动时系统选择等待时间"></a>2. 修改启动时系统选择等待时间</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/default/grub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改GRUB_TIMEOUT后的数值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新启动菜单</span></span><br><span class="line">sudo update-grub2</span><br></pre></td></tr></table></figure>
+<h1 id="3-设置sudo免密码"><a href="#3-设置sudo免密码" class="headerlink" title="3. 设置sudo免密码"></a>3. 设置sudo免密码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/sudoers</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改%sudo ALL=(ALL:ALL) ALL为</span></span><br><span class="line">%sudo ALL=(ALL) NOPASSWD:ALL</span><br></pre></td></tr></table></figure>
+<h1 id="4-常用软件安装"><a href="#4-常用软件安装" class="headerlink" title="4. 常用软件安装"></a>4. 常用软件安装</h1><a href="#">Post not found: ubuntu中常用软件安装</a>
+
+<h1 id="5-双系统时间不统一"><a href="#5-双系统时间不统一" class="headerlink" title="5. 双系统时间不统一"></a>5. 双系统时间不统一</h1><p>参考<a target="_blank" rel="noopener" href="https://juejin.im/post/5eb3a1556fb9a0434b73545c#heading-31">写给工程师的ubuntu20.04的最佳配置指南</a></p>
 <ol>
 <li>原因如下：</li>
 </ol>
@@ -120,32 +124,7 @@
 <ol start="2">
 <li>解决方案：<br>禁用ubuntu中的UTC</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timedatectl set-local-rtc 1 --adjust-system-clock</span><br></pre></td></tr></table></figure>
-<h2 id="分屏终端"><a href="#分屏终端" class="headerlink" title="分屏终端"></a>分屏终端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install terminator</span><br></pre></td></tr></table></figure>
-<p>安装完成后要运行一下才能用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">terminator</span><br></pre></td></tr></table></figure>
-
-<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><p>首先下载网易云音乐安装包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb</span><br></pre></td></tr></table></figure>
-<p>开始安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i netease-cloud-music_1.1.0_amd64_ubuntu.deb</span><br><span class="line"><span class="comment">#如果有错误</span></span><br><span class="line">sudo apt-get -f install</span><br></pre></td></tr></table></figure>
-<p>安装完成后启动时发现打不开<br>终端输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netease-cloud-music</span><br></pre></td></tr></table></figure>
-<p>如果是出现</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Failed to load module <span class="string">&quot;canberra-gtk-module&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#解决</span></span><br><span class="line">sudo apt-get install libcanberra-gtk</span><br></pre></td></tr></table></figure>
-<p>再次打开，可能还不行，只能后台打开，我也不知道为什么</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netease-cloud-music </span><br></pre></td></tr></table></figure>
-<h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p>官网下载deb包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://code.visualstudio.com/docs/?dv=linux64_deb</span><br><span class="line"></span><br><span class="line">sudo dpkg -i code_1.45.1-1589445302_amd64.deb</span><br></pre></td></tr></table></figure>
-<h2 id="QQ-微信"><a href="#QQ-微信" class="headerlink" title="QQ/微信"></a>QQ/微信</h2><p><del><a target="_blank" rel="noopener" href="https://im.qq.com/linuxqq/download.html">Linux版QQ下载地址</a><br>下载完成后</del> </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sudo dpkg -i linuxqq_1.0.1-b1-100_armhf.deb</span></span><br></pre></td></tr></table></figure>
-<p>以上方式安装的qq太老了，最后决定先安装wine，在安装qq</p>
-<p>安装deepin-wine-for-ubuntu</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git</span><br><span class="line"><span class="built_in">cd</span> deepin-wine-for-ubuntu</span><br><span class="line">sudo ./install.sh</span><br></pre></td></tr></table></figure>
-<p>下载地址：<br><a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/">微信</a><br><a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/">TIM</a></p>
-<h3 id="微信安装完成的问题"><a href="#微信安装完成的问题" class="headerlink" title="微信安装完成的问题"></a>微信安装完成的问题</h3><p>微信成功登录以后，中间会有一个小黑方块，据说是由于表情包弹窗引起的，没找到永久消除的办法<br>在任意一个聊天框输入一个表情，就可以消除黑方块</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/bornfree5511/article/details/106470875">ubuntu新系统一次性配置</a><br><a target="_blank" rel="noopener" href="https://juejin.im/post/5eb3a1556fb9a0434b73545c#heading-31">写给工程师的ubuntu20.04最佳配置指南</a></p>
- 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timedatectl set-local-rtc 1 --adjust-system-clock</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -209,7 +188,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/01/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ubuntu%E4%B8%AD%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8F%8A%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/04/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ubuntu20-04%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -222,19 +201,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/01/28/ROS/ubuntu18-04LTS%E5%AE%89%E8%A3%85ROS/" class="article-nav-link">
+      <a href="/2021/04/30/ROS/ubuntu20-04%E5%AE%89%E8%A3%85ROS/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            ubuntu18.04LTS安装ROS
+            ubuntu20.04安装ROS
           
         </div>
       </a>
     
     
-      <a href="/2021/01/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%AE%89%E8%A3%85windows10%E5%92%8CUbuntu18-04%E5%8F%8C%E7%B3%BB%E7%BB%9F/" class="article-nav-link">
+      <a href="/2021/04/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/WSL%E5%AE%89%E8%A3%85ROS-melodic/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">安装windows10和Ubuntu18.04双系统</div>
+        <div class="article-nav-title">WSL安装ROS-melodic</div>
       </a>
     
   </nav>
