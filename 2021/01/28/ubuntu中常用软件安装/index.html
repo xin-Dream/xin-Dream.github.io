@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">437</span>
+            <span class="post-count">541</span>
         </span>
     </span>
 
@@ -110,7 +110,7 @@
 <h1 id="1-分屏终端"><a href="#1-分屏终端" class="headerlink" title="1. 分屏终端"></a>1. 分屏终端</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install terminator</span><br></pre></td></tr></table></figure>
 <p>安装完成后要运行一下才能用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">terminator</span><br></pre></td></tr></table></figure>
-
+<h2 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h2><p>配置文件已上传至github，按以下步骤下载并替换即可<br><a target="_blank" rel="noopener" href="https://github.com/xin-Dream/ubuntu_files">配置文件下载</a></p>
 <h1 id="2-网易云音乐"><a href="#2-网易云音乐" class="headerlink" title="2. 网易云音乐"></a>2. 网易云音乐</h1><p>首先下载网易云音乐安装包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb</span><br></pre></td></tr></table></figure>
 <p>开始安装</p>
@@ -134,7 +134,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Setup</span></span><br><span class="line">curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.gpg</span><br><span class="line">sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/</span><br><span class="line">sudo sh -c <span class="string">&#x27;echo &quot;deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main&quot; &gt; /etc/apt/sources.list.d/microsoft-edge-dev.list&#x27;</span></span><br><span class="line">sudo rm microsoft.gpg</span><br><span class="line"><span class="comment">## Install</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install microsoft-edge-dev</span><br></pre></td></tr></table></figure>
 <h1 id="6-Barrier"><a href="#6-Barrier" class="headerlink" title="6. Barrier"></a>6. Barrier</h1><a href="#">Post not found: 多机共享键鼠软件Barrier.md</a>
 
- 
+<h1 id="7-zsh-amp-Oh-my-zsh"><a href="#7-zsh-amp-Oh-my-zsh" class="headerlink" title="7. zsh &amp; Oh my zsh"></a>7. zsh &amp; Oh my zsh</h1><a href="#">Post not found: ubuntu安装zsh.md</a>
+
+<h1 id="8-clash"><a href="#8-clash" class="headerlink" title="8. clash"></a>8. clash</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Downloads</span><br><span class="line">mkdir clash</span><br><span class="line"><span class="built_in">cd</span> clash</span><br><span class="line"></span><br><span class="line"><span class="comment">#下载并解压linux-amd64</span></span><br><span class="line">https://github.com/Dreamacro/clash/releases</span><br><span class="line"></span><br><span class="line"><span class="comment">#重命名为clash</span></span><br><span class="line">chmod +x clash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 先执行一次</span></span><br><span class="line">./clash -d .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在官网获取配置文件config.yml</span></span><br><span class="line"></span><br><span class="line">cp ~/Downloads/clash/config.yml ~/.config/clash</span><br><span class="line"><span class="built_in">cd</span> ~/.config/clash</span><br><span class="line">mv config.yml config.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新运行./clash即可</span></span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
