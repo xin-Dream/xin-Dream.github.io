@@ -17,6 +17,11 @@ categories:
 
 ```c
 http://mirrors.ustc.edu.cn/eclipse/technology/babel/update-site/R0.17.1/2019-12/
+
+# 新地址
+http://mirrors.ustc.edu.cn/eclipse/technology/babel/update-site/R0.18.3/2021-03/
+
+#当地址失效时，网页打开查看最新文件即可
 ```
 
 加载完成后选择下图选项，next安装
@@ -41,6 +46,11 @@ http://mirrors.ustc.edu.cn/eclipse/technology/babel/update-site/R0.17.1/2019-12/
 
 ```bash
 https://download.eclipse.org/tools/cdt/releases/9.11
+
+# 新地址
+https://download.eclipse.org/tools/cdt/releases/10.2
+
+#当地址失效时，网页打开查看最新文件即可
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200824225930786.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MTcyMTU2,size_16,color_FFFFFF,t_70#pic_center)
 (2)Plug-in
