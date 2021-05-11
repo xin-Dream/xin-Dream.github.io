@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">331</span>
+            <span class="post-count">341</span>
         </span>
     </span>
 
@@ -115,9 +115,13 @@
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
 <ol start="3">
+<li>跳转目录</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install autojump</span><br></pre></td></tr></table></figure>
+<ol start="4">
 <li>修改配置文件</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置字体模式以及配置命令行的主题，语句顺序不能颠倒</span></span><br><span class="line">POWERLEVEL9K_MODE=<span class="string">&#x27;nerdfont-complete&#x27;</span></span><br><span class="line">ZSH_THEME=<span class="string">&quot;powerlevel9k/powerlevel9k&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下内容去掉注释即可生效：</span></span><br><span class="line"><span class="comment"># 启动错误命令自动更正</span></span><br><span class="line">ENABLE_CORRECTION=<span class="string">&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在命令执行的过程中，使用小红点进行提示</span></span><br><span class="line">COMPLETION_WAITING_DOTS=<span class="string">&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 启用已安装的插件</span></span><br><span class="line">plugins=(</span><br><span class="line">  git extract fasd zsh-autosuggestions zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置字体模式以及配置命令行的主题，语句顺序不能颠倒</span></span><br><span class="line">POWERLEVEL9K_MODE=<span class="string">&#x27;nerdfont-complete&#x27;</span></span><br><span class="line">ZSH_THEME=<span class="string">&quot;powerlevel9k/powerlevel9k&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下内容去掉注释即可生效：</span></span><br><span class="line"><span class="comment"># 启动错误命令自动更正</span></span><br><span class="line">ENABLE_CORRECTION=<span class="string">&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在命令执行的过程中，使用小红点进行提示</span></span><br><span class="line">COMPLETION_WAITING_DOTS=<span class="string">&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 启用已安装的插件</span></span><br><span class="line">plugins=(</span><br><span class="line">  git extract fasd zsh-autosuggestions zsh-syntax-highlighting autojump</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <h2 id="3-安装zsh后ros命令失效问题"><a href="#3-安装zsh后ros命令失效问题" class="headerlink" title="3. 安装zsh后ros命令失效问题"></a>3. 安装zsh后ros命令失效问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vim ~/.zshrc</span><br><span class="line"><span class="comment">#将source /opt/ros/noetoc/setup.zsh加入其中即可</span></span><br><span class="line"><span class="built_in">source</span> /opt/ros/noetoc/setup.zsh</span><br><span class="line"><span class="comment">#在bash中的形式是source /opt/ros/noetoc/setup.bash</span></span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
@@ -192,6 +196,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2021/05/08/ROS-melodic%E5%AE%89%E8%A3%85cartographer/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            ROS-melodic安装cartographer
+          
+        </div>
+      </a>
     
     
       <a href="/2021/05/03/%E5%A4%9A%E6%9C%BA%E5%85%B1%E4%BA%AB%E9%94%AE%E9%BC%A0%E8%BD%AF%E4%BB%B6Barrier/" class="article-nav-link">
