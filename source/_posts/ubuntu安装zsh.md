@@ -36,7 +36,13 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-3. 修改配置文件
+3. 跳转目录
+
+```bash
+sudo apt-get install autojump
+```
+
+4. 修改配置文件
 
 ```bash
 # 设置字体模式以及配置命令行的主题，语句顺序不能颠倒
@@ -52,7 +58,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # 启用已安装的插件
 plugins=(
-  git extract fasd zsh-autosuggestions zsh-syntax-highlighting
+  git extract fasd zsh-autosuggestions zsh-syntax-highlighting autojump
 )
 ```
 

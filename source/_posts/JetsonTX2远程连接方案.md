@@ -56,6 +56,8 @@ ssh连接本来计划是在Windows中通过xshell实现，但是最近看到一�
 #在虚拟机或PC的ubuntu中执行
 ssh 主机名@主机地址
 #后面会输入密码，若成功则表示不缺少组件，否则请根据提示安装相关组件
+#一般缺少openssh-server
+sudo apt install openssh-server
 ```
 
 ```bash
