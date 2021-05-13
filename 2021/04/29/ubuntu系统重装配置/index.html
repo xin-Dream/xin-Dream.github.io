@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    有关教育问题的一点见解 |  Dream
+    ubuntu系统重装配置 |  Dream
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -51,7 +51,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-有关教育问题的一点见解"
+  id="post-ubuntu系统重装配置"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -62,7 +62,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  有关教育问题的一点见解
+  ubuntu系统重装配置
 </h1>
  
 
@@ -70,11 +70,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/04/20/%E6%9C%89%E5%85%B3%E6%95%99%E8%82%B2%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E8%A7%81%E8%A7%A3/" class="article-date">
-  <time datetime="2021-04-20T08:47:39.000Z" itemprop="datePublished">2021-04-20</time>
+      <a href="/2021/04/29/ubuntu%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2021-04-29T15:58:55.000Z" itemprop="datePublished">2021-04-29</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E8%82%B2/">教育</a>
+    <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a> / <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ubuntu/">ubuntu</a>
   </div>
   
 <div class="word_count">
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.7k</span>
+            <span class="post-count">302</span>
         </span>
     </span>
 
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">5 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -106,81 +106,26 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="问题起源：小学生假期刷270份考卷，50份自答卷，7本习题集"><a href="#问题起源：小学生假期刷270份考卷，50份自答卷，7本习题集" class="headerlink" title="问题起源：小学生假期刷270份考卷，50份自答卷，7本习题集"></a>问题起源：小学生假期刷270份考卷，50份自答卷，7本习题集</h1><blockquote>
-<p> 为什么大部分家长对小学生的教育施压越来越重？<br> 那究竟需要有多少知识储备才能在高考中脱颖而出？<br> 赢得了高考，再要怎么发展，继续做题考研吗？</p>
-</blockquote>
-<p><em>由于学习压力在各个阶段都有，我们最后讨论，首先按不同阶段的学习讨论</em></p>
+  <h1 id="1-安装WIFI"><a href="#1-安装WIFI" class="headerlink" title="1. 安装WIFI"></a>1. 安装WIFI</h1><p>可以在 software&amp;updates -&gt; Additional Drivers里选择合适的显卡驱动和WIFI驱动<br>若没有WIFI驱动，可以先换源</p>
+<h1 id="2-修改启动时系统选择等待时间"><a href="#2-修改启动时系统选择等待时间" class="headerlink" title="2. 修改启动时系统选择等待时间"></a>2. 修改启动时系统选择等待时间</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/default/grub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改GRUB_TIMEOUT后的数值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新启动菜单</span></span><br><span class="line">sudo update-grub2</span><br></pre></td></tr></table></figure>
+<h1 id="3-设置sudo免密码"><a href="#3-设置sudo免密码" class="headerlink" title="3. 设置sudo免密码"></a>3. 设置sudo免密码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/sudoers</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改%sudo ALL=(ALL:ALL) ALL为</span></span><br><span class="line">%sudo ALL=(ALL) NOPASSWD:ALL</span><br></pre></td></tr></table></figure>
+<h1 id="4-常用软件安装"><a href="#4-常用软件安装" class="headerlink" title="4. 常用软件安装"></a>4. 常用软件安装</h1><a href="/2021/01/28/ubuntu%E4%B8%AD%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="ubuntu中常用软件安装">ubuntu中常用软件安装</a>
+
+<h1 id="5-双系统时间不统一"><a href="#5-双系统时间不统一" class="headerlink" title="5. 双系统时间不统一"></a>5. 双系统时间不统一</h1><p>参考<a target="_blank" rel="noopener" href="https://juejin.im/post/5eb3a1556fb9a0434b73545c#heading-31">写给工程师的ubuntu20.04的最佳配置指南</a></p>
+<ol>
+<li>原因如下：</li>
+</ol>
 <ul>
-<li><h2 id="首先要讨论一个问题，应试教育究竟是不是公平"><a href="#首先要讨论一个问题，应试教育究竟是不是公平" class="headerlink" title="首先要讨论一个问题，应试教育究竟是不是公平"></a>首先要讨论一个问题，应试教育究竟是不是公平</h2>所谓的高考、中考、小升初都应该是由政府制定的规则，目的自然是尽可能广泛、公平的服务于社会。从这个角度看，应试教育是很有必要的。目前看，只有应试教育把人的家庭条件、生活背景、教育条件等等尽可能的拉平，这应该是公平的。那会有很多人说高分低能，生活中需要的是能力而不是成绩。如果没有应试教育，去比能力，只会让层次化更明显，所谓的底层走出去的机会就更低。因为对学生的综合能力来说，家庭环境、生活环境等等影响会更大，想达到所谓的公平，就只能消除这些影响。</li>
+<li>UTC(Coordinated Universal Time)，协调世界时（世界统一时间)；</li>
+<li>GMT(Greenwich Mean Time)，格林威治标准时间。</li>
+<li>Windows 把计算机硬件时间当作本地时间(local time)，所以在 Windows 系统中显示的时间跟 BIOS 中显示的时间是一样的。</li>
+<li>类 Unix 系统把计算机硬件时间当作 UTC， 所以系统启动后会在该时间的基础上，加上电脑设置的时区数(比中国就加8)，因此 Ubuntu 中显示的时间总是比 Windows 中显示的时间快 8 小时。</li>
 </ul>
-<blockquote>
-<p>有了第一个问题的结论，既然应试教育相对公平，那我们就为应试教育去准备。于是引发了第二个问题。</p>
-</blockquote>
-<ul>
-<li><h2 id="为什么会有奥数、竞赛、夏令营等存在？"><a href="#为什么会有奥数、竞赛、夏令营等存在？" class="headerlink" title="为什么会有奥数、竞赛、夏令营等存在？"></a>为什么会有奥数、竞赛、夏令营等存在？</h2><p>这个问题，理论上应该是为了让在某方面表现突出的学生，有更好的机会去接受更高级的教育。但是换个角度想一想。学习过奥数等相对较难课程的学生，甚至是在奥数等方面表现突出而被保送的学生，他们由于一些天赋，在早期就可以接触甚至掌握更高级的理论知识，那以后在理论知识上的发展明显会比普通学生有更大的概率能更长远一点。</p>
-</li>
-<li><h2 id="为什么需要这些人才呢？"><a href="#为什么需要这些人才呢？" class="headerlink" title="为什么需要这些人才呢？"></a>为什么需要这些人才呢？</h2><p>尽管我们说天才不多，勤奋更重要，但能研究出当今科技前沿的科学家们，智商会差吗？假设这些科学家之前没有学过奥数，一个学生想要沿着这位科学家的学习路，学习完他的知识估计比他年轻不了几岁，如果还想要有更突破性进展的话，可能这一代人是来不及了，或许需要两三代人的积累，能有一次大的进步。所以我们需要这些能在奥数等竞赛中展现天赋的学生，我们提高他们的学习起点，甚至是给特殊的专业人才制定特殊的学习计划，靶向学习，甚至是跳跃学习。那这些人才是我们寄托前沿科技发展的专业人才。</p>
-</li>
-<li><h2 id="那我们应该尽力让我们的孩子去学习所谓的奥数等竞赛吗？"><a href="#那我们应该尽力让我们的孩子去学习所谓的奥数等竞赛吗？" class="headerlink" title="那我们应该尽力让我们的孩子去学习所谓的奥数等竞赛吗？"></a>那我们应该尽力让我们的孩子去学习所谓的奥数等竞赛吗？</h2><p>需要！当我们有条件接触到的时候，就应该尽力让孩子去接触。之前我一直信奉要让孩子去接触感兴趣的东西，但实际上并不是。那就要明白人为什么会对某一件事情感兴趣？<strong>当一个人由引导者用合适的方法引导学生接触到某一件事之后，如果他在这一方面有天赋，并且表现得很好，就会对这件事产生兴趣。</strong>但是接触是要适度的，接触之后，发现不适合就应该考虑为什么？是引导者方式不当？还是条件不足？还是确实天分不足？若是天分不足，就应及时调整。</p>
-</li>
-</ul>
-<blockquote>
-<p>以上问题主要是小学教育，下面再讨论高中前的学习</p>
-</blockquote>
-<h2 id="区分文史类与理工类"><a href="#区分文史类与理工类" class="headerlink" title="区分文史类与理工类"></a>区分文史类与理工类</h2><p>高中的教育是区分文史类与理工类的，虽然新高考是自由选科，但大学的专业上还是区分的。</p>
-<p>至于文史类学什么、理工类学什么，就应该有老师逐步为学生讲解，只有理解了不同的类别涉及哪些领域，需要学习哪些知识，接触过之后，才会明白自己的兴趣。</p>
-<p>从理论上来说，文史类的发展没有理工类那么快。</p>
-<h2 id="理工类的发展"><a href="#理工类的发展" class="headerlink" title="理工类的发展"></a>理工类的发展</h2><blockquote>
-<p><strong>以下是我对我所接触到的一些领域的一些个人见解</strong></p>
-</blockquote>
-<h3 id="学科交叉"><a href="#学科交叉" class="headerlink" title="学科交叉"></a>学科交叉</h3><p>以计算机来说，可能会想电脑上的东西都是只能看的，虚无缥缈的。但是换个角度想一下，我们建设网站、搭建服务器、开发软件等等，不都是在为我们其他学科服务？<br>微信，可以语音聊天、视频聊天、文字聊天等等，但是有了这个软件，一个没有交际的人就可以聊天了吗？在我们专业内需要用到一些画图软件，至于什么软件并不重要，学什么软件，就像你会写字一样，但是画什么，写什么，还是取决于自己。<br>当下比较火的机器人、人工智能。下表是我对机器人与人做的一个不完全对比。</p>
-<table>
-<thead>
-<tr>
-<th>机器人</th>
-<th>人</th>
-<th>涉及专业</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>机械结构</td>
-<td>骨骼、肌肉</td>
-<td>机械工程</td>
-</tr>
-<tr>
-<td>电气结构</td>
-<td>神经、血液</td>
-<td>电气、通信等</td>
-</tr>
-<tr>
-<td>下位机控制系统</td>
-<td>中枢神经、小脑等</td>
-<td>软件工程（嵌入式方向）、物联网工程等</td>
-</tr>
-<tr>
-<td>上位机控制系统</td>
-<td>大脑</td>
-<td>计算机、智能科学与技术等</td>
-</tr>
-<tr>
-<td>人工智能算法</td>
-<td>思维方式</td>
-<td>人工智能、大数据等</td>
-</tr>
-<tr>
-<td>机器视觉</td>
-<td>眼睛+大脑</td>
-<td>控制工程与科学、模式识别等</td>
-</tr>
-<tr>
-<td>网络通信</td>
-<td>耳朵+嘴等</td>
-<td>网络工程等</td>
-</tr>
-</tbody></table>
-<p>就一个机器人而言，涉及的领域就有很多。但是就以上这些仅仅是一个没有功能的机器人。作为产品来说，一个机器人应该有他的专业性功能，比如采摘、抓取、医疗等等，那对专业性的机器人还要根据具体的工作结合其他专业。</p>
-<h3 id="发展迅速"><a href="#发展迅速" class="headerlink" title="发展迅速"></a>发展迅速</h3><p>从手机、电脑的更新换代就能看出，人对产品的追求是无穷无尽的，满足了当前需求后，就会再有更多的需求。<br>对一个产品的研发过程来说，不断地更新迭代才会满足工作需要甚至超出预期。</p>
-<h3 id="有理论深度"><a href="#有理论深度" class="headerlink" title="有理论深度"></a>有理论深度</h3> 
+<ol start="2">
+<li>解决方案：<br>禁用ubuntu中的UTC</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timedatectl set-local-rtc 1 --adjust-system-clock</span><br></pre></td></tr></table></figure>
+<h1 id="6-安装pip"><a href="#6-安装pip" class="headerlink" title="6. 安装pip"></a>6. 安装pip</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -244,12 +189,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/04/20/%E6%9C%89%E5%85%B3%E6%95%99%E8%82%B2%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E8%A7%81%E8%A7%A3/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/04/29/ubuntu%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E8%82%B2/" rel="tag">教育</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li></ul>
 
     </footer>
   </div>
@@ -257,19 +202,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/04/22/hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86/" class="article-nav-link">
+      <a href="/2021/04/30/ROS%E5%AE%89%E8%A3%85%E5%8C%85%E8%AE%B0%E5%BD%95/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            hexo博客加密
+            ROS安装包记录
           
         </div>
       </a>
     
     
-      <a href="/2021/04/14/windows%E9%85%8D%E7%BD%AEJAVA%E7%8E%AF%E5%A2%83/" class="article-nav-link">
+      <a href="/2021/04/23/WSL%E5%AE%89%E8%A3%85ROS-melodic/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">windows配置JAVA环境</div>
+        <div class="article-nav-title">WSL安装ROS-melodic</div>
       </a>
     
   </nav>

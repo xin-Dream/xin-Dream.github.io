@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">541</span>
+            <span class="post-count">737</span>
         </span>
     </span>
 
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2 分钟</span>
+            <span class="post-count">3 分钟</span>
         </span>
     </span>
 </div>
@@ -136,7 +136,15 @@
 
 <h1 id="7-zsh-amp-Oh-my-zsh"><a href="#7-zsh-amp-Oh-my-zsh" class="headerlink" title="7. zsh &amp; Oh my zsh"></a>7. zsh &amp; Oh my zsh</h1><a href="#">Post not found: ubuntu安装zsh.md</a>
 
-<h1 id="8-clash"><a href="#8-clash" class="headerlink" title="8. clash"></a>8. clash</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Downloads</span><br><span class="line">mkdir clash</span><br><span class="line"><span class="built_in">cd</span> clash</span><br><span class="line"></span><br><span class="line"><span class="comment">#下载并解压linux-amd64</span></span><br><span class="line">https://github.com/Dreamacro/clash/releases</span><br><span class="line"></span><br><span class="line"><span class="comment">#重命名为clash</span></span><br><span class="line">chmod +x clash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 先执行一次</span></span><br><span class="line">./clash -d .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在官网获取配置文件config.yml</span></span><br><span class="line"></span><br><span class="line">cp ~/Downloads/clash/config.yml ~/.config/clash</span><br><span class="line"><span class="built_in">cd</span> ~/.config/clash</span><br><span class="line">mv config.yml config.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新运行./clash即可</span></span><br></pre></td></tr></table></figure> 
+<h1 id="8-clash"><a href="#8-clash" class="headerlink" title="8. clash"></a>8. clash</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Downloads</span><br><span class="line">mkdir clash</span><br><span class="line"><span class="built_in">cd</span> clash</span><br><span class="line"></span><br><span class="line"><span class="comment">#下载并解压linux-amd64</span></span><br><span class="line">https://github.com/Dreamacro/clash/releases</span><br><span class="line"></span><br><span class="line"><span class="comment">#重命名为clash</span></span><br><span class="line">chmod +x clash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 先执行一次</span></span><br><span class="line">./clash </span><br><span class="line"></span><br><span class="line"><span class="comment"># 在官网获取配置文件config.yml</span></span><br><span class="line"></span><br><span class="line">cp ~/Downloads/clash/config.yml ~/.config/clash</span><br><span class="line"><span class="built_in">cd</span> ~/.config/clash</span><br><span class="line">mv config.yml config.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新运行./clash即可</span></span><br></pre></td></tr></table></figure>
+<h1 id="9-输入法安装"><a href="#9-输入法安装" class="headerlink" title="9. 输入法安装"></a>9. 输入法安装</h1><p>安装WiFi还是需要百度的，所以先安装搜狗输入法<br>首先安装Fcitx输入框架</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法Linux</a></p>
+<p>安装完成后就是对输入法的设置</p>
+<p> 设置–&gt;区域和语言–&gt;管理已安装的语言–&gt;键盘输入法系统<br> 选择刚才安装的Fcitx框架–&gt;应用到整个系统</p>
+<p> 然后要重启一下<br>再打开右上角有个小键盘，里面有配置当前输入法，<del>将搜狗输入法上移到第一位，就可以了</del> </p>
+<p>这里有点问题，如果搜狗输入法在第一位，中英文切换的时候，输入法里会有一些乱码。所以这里将键盘-汉语移到最上面，如图<br><img src="https://img-blog.csdnimg.cn/20200602130238639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MTcyMTU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+ 
       <!-- reward -->
       
     </div>
