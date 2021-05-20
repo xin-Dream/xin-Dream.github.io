@@ -1,5 +1,5 @@
 ---
-title: ubuntu20.04系统重装配置
+title: ubuntu系统重装配置
 date: 2021-04-29 23:58:55
 tags: 
     [ubuntu,操作系统] 

@@ -7,7 +7,17 @@ categories:
     [ROS,实践操作]
 ---
 # 1. 使用串口与stm32通信
+
 ```bash
-sudo apt-get install ros-noetic-rosserial
+sudo apt-get install ros-melodic-rosserial
+```
+
+# 2. gmapping建图
+
+```bash
+sudo apt-get install ros-melodic-gmapping
+sudo apt-get install ros-melodic-slam-gmapping
+sudo apt-get install ros-melodic-map-server
 
 ```
+

@@ -70,3 +70,12 @@ sudo vim ~/.zshrc
 source /opt/ros/noetoc/setup.zsh
 #在bash中的形式是source /opt/ros/noetoc/setup.bash
 ```
+
+## 4. 设置zsh为默认shell
+
+```bash
+chsh -s /bin/zsh
+
+# 查看已安装的shell
+cat /etc/shells
+```

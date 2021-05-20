@@ -127,7 +127,7 @@ sudo apt install microsoft-edge-dev
  chmod +x clash
 
  # 先执行一次
- ./clash -d .
+ ./clash 
 
  # 在官网获取配置文件config.yml
 
@@ -137,3 +137,25 @@ sudo apt install microsoft-edge-dev
 
  # 重新运行./clash即可
 ```
+
+# 9. 输入法安装
+安装WiFi还是需要百度的，所以先安装搜狗输入法
+首先安装Fcitx输入框架
+
+```bash
+sudo apt install fcitx
+
+```
+
+[搜狗输入法Linux](https://pinyin.sogou.com/linux/?r=pinyin)
+
+安装完成后就是对输入法的设置
+
+ 设置-->区域和语言-->管理已安装的语言-->键盘输入法系统
+ 选择刚才安装的Fcitx框架-->应用到整个系统
+ 
+ 然后要重启一下
+再打开右上角有个小键盘，里面有配置当前输入法，~~将搜狗输入法上移到第一位，就可以了~~ 
+
+这里有点问题，如果搜狗输入法在第一位，中英文切换的时候，输入法里会有一些乱码。所以这里将键盘-汉语移到最上面，如图
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200602130238639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MTcyMTU2,size_16,color_FFFFFF,t_70)
