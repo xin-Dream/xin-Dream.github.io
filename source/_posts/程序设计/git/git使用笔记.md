@@ -54,6 +54,11 @@ git pull
 checkout index.py
 ```
 
+# git 高级操作
+分支操作：
+
+
+
 # ubuntu ssh连接git
 
  1. 创建SSH key , 没有特殊的指定文件可以直接回车

@@ -50,6 +50,7 @@ sudo rosdep init
 ```bash
 sudo apt-get install python-rosdep
 ```
+
 安装完成后，又出现了新错误，如下
 ### ERROR: cannot download default sources list from:
 https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list
@@ -88,6 +89,27 @@ sudo gedit /etc/hosts
 #可以先ping一下地址测试
 ```
 
+### 解决init失败方法（2021.05.30）
+
+```bash
+sudo vim /etc/ros/rosdep/source.list.d/20-default.list
+
+#复制以下内容，以下内容来自
+https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list
+
+# os-specific listings first
+yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml osx
+
+# generic
+yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
+yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml
+yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml
+gbpdistro https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml fuerte
+
+# newer distributions (Groovy, Hydro, ...) must not be listed anymore, they are being fetched from the rosdistro index.yaml instead
+```
+
+
 接下来继续安装过程
 
 ```bash
@@ -95,6 +117,41 @@ rosdep update
 ```
 ### 【2020-12-03】
 这里如果出错可能是网络问题，可以试一下手机热点
+
+### 【2021-05-30】
+可以先测试一下网络延迟，然后将等待时间更改到对应延时，即可解决time out 问题
+
+```bash
+ping raw.githubusercontent.com
+
+cd /usr/lib/python2.7/dist-packages/rosdep2
+sudo vim source_list.py
+sudo vim gbpdistro_support.py
+sudo vim rep3.py
+
+#将文件中的DOWNLOAD_TIMEOUT改为相应值超出一部分
+
+```
+
+### 【2021-05-30】
+上一方法主要针对网络较好时，这个是使用https://ghproxy.com的代理加速，目前来看这个方法是最高效的
+
+```bash
+cd /usr/lib/python2.7/dist-packages/
+
+sudo vim rosdep2/source_list.py
+#在download_rosdep_data方法中添加
+url="https://ghproxy.com/"+url
+
+#在以下文件中的网址前添加“https://ghproxy.com/”
+/usr/lib/python2.7/dist-packages/rosdistro/__init__.py
+/usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py 36行
+/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py 72行
+/usr/lib/python2.7/dist-packages/rosdep2/rep3.py	39行
+/usr/lib/python2.7/dist-packages/rosdistro/manifest_provider/github.py 68行 119行
+```
+
+
 ## 设置环境变量
 
 ```bash
@@ -107,7 +164,7 @@ source ~/.bashrc
 ## 安装rosinstall
 
 ```bash
-sudo apt install python-rosinstall pyton-rosinstall-generator python-wstool build-essential
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
 ```
 
 # 测试
