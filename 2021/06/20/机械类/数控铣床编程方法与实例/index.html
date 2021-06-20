@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    categories |  Dream
+    数控铣床编程方法与实例 |  Dream
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -50,12 +50,366 @@
       
     <main class="content on">
       <section class="outer">
+  <article
+  id="post-机械类/数控铣床编程方法与实例"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  数控铣床编程方法与实例
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/20/%E6%9C%BA%E6%A2%B0%E7%B1%BB/%E6%95%B0%E6%8E%A7%E9%93%A3%E5%BA%8A%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E4%BE%8B/" class="article-date">
+  <time datetime="2021-06-20T12:34:44.000Z" itemprop="datePublished">2021-06-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9C%BA%E6%A2%B0/">机械</a>
+  </div>
   
-    <h1 class="page-type-title">分类</h1>
-    <div class="categories-box">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/ROS/">ROS</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/others/">others</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/ubuntu/">ubuntu</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/windows/">windows</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/">单片机</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/STM32/">STM32</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/opencv/">opencv</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E6%A2%B0/">机械</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E6%A2%B0/Solidworks/">Solidworks</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/LeetCode/">LeetCode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/git/">git</a><span class="category-list-count">2</span></li></ul></li></ul>
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">369</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
   
+    <div class="article-entry" itemprop="articleBody">
+       
+  <ul>
+<li><a href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86">基础知识</a><ul>
+<li><a href="#1-%E5%9D%90%E6%A0%87%E7%B3%BB%E8%A7%84%E5%AE%9A">1. 坐标系规定</a></li>
+<li><a href="#2-%E8%BE%85%E5%8A%A9%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81">2. 辅助功能代码</a></li>
+<li><a href="#3-%E5%8A%9F%E8%83%BD%E5%AD%97">3. 功能字</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="1-坐标系规定"><a href="#1-坐标系规定" class="headerlink" title="1. 坐标系规定"></a>1. 坐标系规定</h2><h2 id="2-辅助功能代码"><a href="#2-辅助功能代码" class="headerlink" title="2. 辅助功能代码"></a>2. 辅助功能代码</h2><table>
+<thead>
+<tr>
+<th>辅助代码</th>
+<th>含义</th>
+<th>相似或对立代码</th>
+<th>相似或对立代码含义</th>
+<th>相似或对立代码</th>
+<th>相似或对立代码含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>M00</td>
+<td>程序暂停</td>
+<td>M01</td>
+<td>程序计划暂停</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>M02</td>
+<td>主程序结束(返回到复位状态)</td>
+<td>M30</td>
+<td>程序结束(返回到程序开始状态)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>M03</td>
+<td>启动主轴正转</td>
+<td>M04</td>
+<td>启动主轴反转</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>M05</td>
+<td>停车</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>M06</td>
+<td>自动换刀</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>M07</td>
+<td>2号切屑液(雾状)</td>
+<td>M08</td>
+<td>1号切屑液(液态)</td>
+<td>M09</td>
+<td>切屑液关</td>
+</tr>
+<tr>
+<td>M10</td>
+<td>运动部件夹紧</td>
+<td>M11</td>
+<td>运动部件的松开</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="3-功能字"><a href="#3-功能字" class="headerlink" title="3. 功能字"></a>3. 功能字</h2><table>
+<thead>
+<tr>
+<th>辅助代码</th>
+<th>含义</th>
+<th>相似或对立代码</th>
+<th>相似或对立代码含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>G90</td>
+<td>绝对值方式编程</td>
+<td>G91</td>
+<td>增量式编程</td>
+<td></td>
+</tr>
+<tr>
+<td>G17</td>
+<td>选择XY平面</td>
+<td>G18</td>
+<td>选择ZX平面</td>
+<td>G19 选择YZ平面</td>
+</tr>
+<tr>
+<td>G14</td>
+<td>X、Y坐标依次单独先后快速定位（G00）</td>
+<td>G15</td>
+<td>Y、X坐标依次单独先后快速定位（G00）</td>
+<td></td>
+</tr>
+<tr>
+<td>G11</td>
+<td>对称于Y轴镜像</td>
+<td>G12</td>
+<td>对称于X轴镜像</td>
+<td></td>
+</tr>
+<tr>
+<td>G04</td>
+<td>暂停指令</td>
+<td></td>
+<td></td>
+<td>暂停时单位为秒(s),0.01-99.99;G04 K</td>
+</tr>
+<tr>
+<td>G02</td>
+<td>顺时针圆弧插补</td>
+<td>G03</td>
+<td>逆时针圆弧插补</td>
+<td>G02 X Y Z I J K F LF</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>直线插补</td>
+<td></td>
+<td></td>
+<td>G01 X Y Z F LF</td>
+</tr>
+<tr>
+<td>G00</td>
+<td>快速定位指令</td>
+<td></td>
+<td></td>
+<td>G00指令时F指令无效，无需指定速度 ；G00不一定是直线，可能是折线</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/06/20/%E6%9C%BA%E6%A2%B0%E7%B1%BB/%E6%95%B0%E6%8E%A7%E9%93%A3%E5%BA%8A%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E4%BE%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8E%A7/" rel="tag">数控</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/06/20/vscode%E4%B8%ADmarkdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            vscode中markdown使用技巧
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">配置CLion开发stm32</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "kWWwiJbCGBgDQ7uH4mjyhx0l-MdYXbMMI#",
+    app_key: "eGg65IfJEHNqwvCegRNLXaX9#",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -195,6 +549,23 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
