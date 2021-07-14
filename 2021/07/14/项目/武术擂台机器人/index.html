@@ -51,7 +51,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-武术擂台机器人"
+  id="post-项目/武术擂台机器人"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -70,7 +70,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/07/14/%E6%AD%A6%E6%9C%AF%E6%93%82%E5%8F%B0%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="article-date">
+      <a href="/2021/07/14/%E9%A1%B9%E7%9B%AE/%E6%AD%A6%E6%9C%AF%E6%93%82%E5%8F%B0%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="article-date">
   <time datetime="2021-07-14T07:07:22.000Z" itemprop="datePublished">2021-07-14</time>
 </a> 
   <div class="article-category">
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">263</span>
         </span>
     </span>
 
@@ -98,13 +98,73 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <h1 id="一、武术擂台机器人"><a href="#一、武术擂台机器人" class="headerlink" title="一、武术擂台机器人"></a>一、武术擂台机器人</h1><details>
+    <summary>设计结构框架：点击查看详细内容</summary>
+        <li><input disabled="" type="checkbox"> 结构设计
+            <ul>
+                <li><input checked="" disabled="" type="checkbox"> 钣金结构设计</li>
+                <li><input checked="" disabled="" type="checkbox"> 固定传感器支架</li>
+                <li><input disabled="" type="checkbox"> 车内电路板固定支撑板</li>
+                <li><input disabled="" type="checkbox"> 电池固定与缓冲</li>
+                <li><input disabled="" type="checkbox"> 电机抗磁干扰结构设计</li>
+            </ul>
+        </li>
+        <li><input disabled="" type="checkbox"> 电路设计
+            <ul>
+                <li><input checked="" disabled="" type="checkbox"> 24V、12V、5V、3.3V稳压电路</li>
+                <li><input disabled="" type="checkbox"> 基于IR2184的电机驱动电路</li>
+                <li><input disabled="" type="checkbox"> 短路保护与过载保护</li>
+                <li><input checked="" disabled="" type="checkbox"> 信号隔离电路</li>
+                <li><input disabled="" type="checkbox"> 基于电路的环向传感器方向分辨电路</li>
+            </ul>
+        </li>
+        <li><input disabled="" type="checkbox"> 基于FreeRTOS的程序框架设计
+            <ul>
+                <li><input checked="" disabled="" type="checkbox"> 调试功能设计
+                    <ul>
+                        <li><input checked="" disabled="" type="checkbox"> 蓝牙通信</li>
+                        <li><input checked="" disabled="" type="checkbox"> OLED显示</li>
+                        <li><input disabled="" type="checkbox"> SD卡读取</li>
+                    </ul>
+                </li>
+                <li><input disabled="" type="checkbox"> 传感层
+                    <ul>
+                        <li><input checked="" disabled="" type="checkbox"> DMA读取ADC数据</li>
+                        <li><input disabled="" type="checkbox"> 读取编码器数值</li>
+                        <li><input disabled="" type="checkbox"> 读取电机驱动电流</li>
+                        <li><input disabled="" type="checkbox"> 电机基本控制</li>
+                    </ul>
+                </li>
+                <li><input disabled="" type="checkbox"> 感知层
+                    <ul>
+                        <li><input checked="" disabled="" type="checkbox"> 数据分类与冗余数据的简单融合</li>
+                        <li><input checked="" disabled="" type="checkbox"> 基于程序的环向传感器方向分辨</li>
+                        <li><input disabled="" type="checkbox"> 基于三角形布置灰度传感器的位置感知</li>
+                        <li><input disabled="" type="checkbox"> 落台检测与方向判断</li>
+                        <li><input disabled="" type="checkbox"> 登台位置选择</li>
+                    </ul>
+                </li>
+                <li><input disabled="" type="checkbox"> 决策层
+                    <ul>
+                        <li><input disabled="" type="checkbox"> 巡航</li>
+                        <li><input checked="" disabled="" type="checkbox"> 寻找敌人</li>
+                        <li><input disabled="" type="checkbox"> 对抗</li>
+                        <li><input disabled="" type="checkbox"> 使用概率法的对敌人位置预估</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+  <!-- <pre><code>title，value，callBack可以缺省</code></pre> -->
+</details>
+ 
       <!-- reward -->
       
     </div>
@@ -168,7 +228,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/07/14/%E6%AD%A6%E6%9C%AF%E6%93%82%E5%8F%B0%E6%9C%BA%E5%99%A8%E4%BA%BA/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/07/14/%E9%A1%B9%E7%9B%AE/%E6%AD%A6%E6%9C%AF%E6%93%82%E5%8F%B0%E6%9C%BA%E5%99%A8%E4%BA%BA/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -181,8 +241,17 @@
    
   <nav class="article-nav">
     
+      <a href="/2021/07/14/hexo/hexo%E4%B8%AD%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            hexo中文章置顶
+          
+        </div>
+      </a>
     
-      <a href="/2021/07/03/%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/" class="article-nav-link">
+    
+      <a href="/2021/07/03/%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
         <div class="article-nav-title">项目规划</div>
       </a>
