@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Python创建列表 |  Dream
+    LeetCode-202-happy-number |  Dream
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -51,7 +51,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-程序设计/Python/Python创建列表"
+  id="post-程序设计/LeetCode/LeetCode-202-happy-number"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -62,7 +62,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Python创建列表
+  LeetCode-202-happy-number
 </h1>
  
 
@@ -70,11 +70,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/01/28/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Python/Python%E5%88%9B%E5%BB%BA%E5%88%97%E8%A1%A8/" class="article-date">
-  <time datetime="2021-01-28T14:13:35.000Z" itemprop="datePublished">2021-01-28</time>
+      <a href="/2021/07/18/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/LeetCode/LeetCode-202-happy-number/" class="article-date">
+  <time datetime="2021-07-18T13:10:57.000Z" itemprop="datePublished">2021-07-18</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a> / <a class="article-category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Python/">Python</a>
+    <a class="article-category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a> / <a class="article-category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/LeetCode/">LeetCode</a>
   </div>
   
 <div class="word_count">
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">307</span>
+            <span class="post-count">519</span>
         </span>
     </span>
 
@@ -91,27 +91,45 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1=[<span class="literal">None</span>]*<span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p>使用这种方式创建一个普通的一维列表是没问题的<br>可以检测一下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list1=[<span class="literal">None</span>]*<span class="number">5</span></span><br><span class="line">list1[<span class="number">3</span>]=<span class="number">1</span></span><br><span class="line">print(list1)</span><br><span class="line"></span><br><span class="line">[<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">1</span>, <span class="literal">None</span>]</span><br></pre></td></tr></table></figure>
-<p>但是，当用这种方式创建一个多维列表时，就会出现以下问题</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list2=[[<span class="literal">None</span>]*<span class="number">5</span>]*<span class="number">5</span>\</span><br><span class="line">list2[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">1</span></span><br><span class="line">print(list2)</span><br><span class="line"></span><br><span class="line">[[<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">1</span>, <span class="literal">None</span>], [<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">1</span>, <span class="literal">None</span>],</span><br><span class="line"> [<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">1</span>, <span class="literal">None</span>], [<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">1</span>, <span class="literal">None</span>],</span><br><span class="line"> [<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">1</span>, <span class="literal">None</span>]]</span><br></pre></td></tr></table></figure>
-<p>这样创建出的多维列表，修改其中一个子列表中元素时，所有子列表的相应元素都会改变。<br>查阅官方文档发现，这种创建的列表只是对一个子列表的引用，所以子列表改变，其余子列表也都会改变</p>
-<p>解决办法就是换一种创建方法，下列几种方案：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">list1=[[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]]</span><br><span class="line"><span class="comment">#数据量少的时候这个办法还可以,而且不会出错</span></span><br><span class="line"></span><br><span class="line">list2=[[<span class="literal">None</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>)] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line"><span class="comment">#使用for循环创建一个列表，原理上和上一种是一样的</span></span><br><span class="line"><span class="comment">#可以验证一下</span></span><br><span class="line">lis2[<span class="number">0</span>][<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">print(list2)</span><br><span class="line"></span><br><span class="line">[[<span class="literal">None</span>, <span class="number">1</span>, <span class="literal">None</span>, <span class="literal">None</span>], [<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>],</span><br><span class="line"> [<span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment">#再就是用numpy数组，这个在深度学习中经常用</span></span><br><span class="line">list3=np.zeros((<span class="number">3</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure> 
+  <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>编写一个算法来判断一个数 n 是不是快乐数。</p>
+<p>「快乐数」定义为：</p>
+<ul>
+<li>对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。</li>
+<li>然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。</li>
+<li>如果 可以变为  1，那么这个数就是快乐数。<br>如果 <code>n</code> 是快乐数就返回 <code>true</code> ；不是，则返回 <code>false</code> 。</li>
+</ul>
+<h2 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="number">19</span></span><br><span class="line">输出：<span class="literal">true</span></span><br><span class="line">解释：</span><br><span class="line"><span class="number">12</span> + <span class="number">92</span> = <span class="number">82</span></span><br><span class="line"><span class="number">82</span> + <span class="number">22</span> = <span class="number">68</span></span><br><span class="line"><span class="number">62</span> + <span class="number">82</span> = <span class="number">100</span></span><br><span class="line"><span class="number">12</span> + <span class="number">02</span> + <span class="number">02</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h2 id="示例2："><a href="#示例2：" class="headerlink" title="示例2："></a>示例2：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：n = <span class="number">2</span></span><br><span class="line">输出：<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><h2 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h2><h3 id="第一种思路"><a href="#第一种思路" class="headerlink" title="第一种思路"></a>第一种思路</h3><p>累计相除后取余，得出每一位数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//第一种实现方式</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> m = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= <span class="number">10</span>; k++) &#123;</span><br><span class="line">        <span class="keyword">int</span> d = n / m % <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, d);</span><br><span class="line">        sum += d * d;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (k &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            m *= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;sum=%d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二种实现</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> m = <span class="number">1000000000</span>; m &gt;= <span class="number">1</span>; m /= <span class="number">10</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> d = n / m % <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, d);</span><br><span class="line">        sum += d * d;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="第二种思路"><a href="#第二种思路" class="headerlink" title="第二种思路"></a>第二种思路</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    s=12345</span></span><br><span class="line"><span class="comment">//    d = s % 10;   d:5</span></span><br><span class="line"><span class="comment">//    s / 10;       s:1234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//    d = s % 10;   d:4</span></span><br><span class="line"><span class="comment">//    s / 10;       s:123</span></span><br><span class="line"><span class="comment">//    以下内容写入函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123; </span><br><span class="line">    <span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> d = n % <span class="number">10</span>;</span><br><span class="line">        n /= <span class="number">10</span>;</span><br><span class="line">        sum += d * d;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> history[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!contains(history, size, n)) &#123;</span><br><span class="line">        history[size] = n;</span><br><span class="line">        size++;</span><br><span class="line"></span><br><span class="line">        n = next_n(n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n == <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第三种思路"><a href="#第三种思路" class="headerlink" title="第三种思路"></a>第三种思路</h3><p>这种思路基于<strong>弗洛伊德的乌龟-兔子循环寻找</strong>。可以在环形链表中找到环形的入口节点。<br>如下图，一快一慢的龟兔会相继进入一个圈内，当两个点相遇的时候，设置一个从相遇点出发，另一个从起点出发，再次相遇，即为环形入口。</p>
+<p>至于更深层次的解释，还没想好怎么表述。</p>
+<p>下图的算法图解在<a target="_blank" rel="noopener" href="https://visualgo.net/en">https://visualgo.net/en</a></p>
+<img src="/2021/07/18/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/LeetCode/LeetCode-202-happy-number/01.png" class="" title="This is an image">
+</br>
+</br>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="comment">//  龟兔赛跑循环</span></span><br><span class="line">    <span class="keyword">int</span> slow = n;</span><br><span class="line">    <span class="keyword">int</span> fast = n;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        slow = next_n(slow);</span><br><span class="line">        fast = next_n(next_n(fast));</span><br><span class="line">        <span class="comment">//fast = next_n(fast);</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (slow != fast);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fast == <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+ 
       <!-- reward -->
       
     </div>
@@ -175,12 +193,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/01/28/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Python/Python%E5%88%9B%E5%BB%BA%E5%88%97%E8%A1%A8/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/07/18/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/LeetCode/LeetCode-202-happy-number/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li></ul>
 
     </footer>
   </div>
@@ -188,19 +206,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/01/28/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/git/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            git使用笔记
-          
-        </div>
-      </a>
     
-    
-      <a href="/2021/01/28/Linux/ROS/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-nav-link">
+      <a href="/2021/07/18/hexo/hexo%E6%96%87%E7%AB%A0%E5%BC%95%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">ROS学习笔记（二）</div>
+        <div class="article-nav-title">hexo文章引用自己的文章</div>
       </a>
     
   </nav>

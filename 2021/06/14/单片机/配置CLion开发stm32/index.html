@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">488</span>
+            <span class="post-count">528</span>
         </span>
     </span>
 
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -114,10 +114,12 @@
 <li><a target="_blank" rel="noopener" href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads">gcc-arm-none-eabi</a>（下载好后解压到指定目录后不要动了）</li>
 <li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/clion/">Clion</a>（这个可以到Jetbrain申请教育账号，就可以使用专业版了，应该需要一年验证一次）</li>
 </ol>
-<h1 id="2-添加环境变量"><a href="#2-添加环境变量" class="headerlink" title="2. 添加环境变量"></a>2. 添加环境变量</h1><pre><code>+ 将上一步下载的MinGW-w64、gcc-arm-none-eabi、OpenOCD的bin目录添加到环境变量
-+ **D:\052-MinGW\bin**、**D:\053-gcc-arm-none-eabi\bin**、**D:\053-gcc-arm-none-eabi\bin**
-+ 添加过以上环境变量后重启电脑即可生效
-+ 可在命令行使用&quot;gcc -v&quot;、&quot;arm-none-eabi-gcc -v&quot;、&quot;openocd -v&quot;验证</code></pre>
+<h1 id="2-添加环境变量"><a href="#2-添加环境变量" class="headerlink" title="2. 添加环境变量"></a>2. 添加环境变量</h1><ul>
+<li>将上一步下载的MinGW-w64、gcc-arm-none-eabi、OpenOCD的bin目录添加到环境变量</li>
+<li><strong>D:\052-MinGW\bin</strong>、<strong>D:\053-gcc-arm-none-eabi\bin</strong>、<strong>D:\053-gcc-arm-none-eabi\bin</strong></li>
+<li>添加过以上环境变量后重启电脑即可生效</li>
+<li>可在命令行使用”gcc -v”、”arm-none-eabi-gcc -v”、”openocd -v”验证</li>
+</ul>
 <h1 id="3-Clion配置"><a href="#3-Clion配置" class="headerlink" title="3. Clion配置"></a>3. Clion配置</h1><ul>
 <li><img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/01.png" class="" title="This is an image"></li>
 <li><img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/02.png" class="" title="This is an image"></li>
@@ -143,7 +145,8 @@
 <li><img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/06.png" class="" title="This is an image"></li>
 <li>配置完成后使用运行按钮即可下载<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This is for using the onboard STLINK/V2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> [find interface/stlink.cfg]</span><br><span class="line"></span><br><span class="line">transport select hla_swd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0x10000 = 64K Flash Size</span></span><br><span class="line"><span class="built_in">set</span> WORKAREASIZE 0x20000</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> [find target/stm32f4x.cfg] </span><br></pre></td></tr></table></figure>
 <h1 id="7-注意事项"><a href="#7-注意事项" class="headerlink" title="7. 注意事项"></a>7. 注意事项</h1></li>
-<li>在Clion中选择文件时按下图配置，这样在CMakeLists中会是单独一行，如果删除文件后还有残留可以自己查到删除<img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/07.png" class="" title="This is an image"><img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/08.png" class="" title="This is an image"><br> 
+<li>在Clion中选择文件时按下图配置，这样在CMakeLists中会是单独一行，如果删除文件后还有残留可以自己查到删除<img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/07.png" class="" title="This is an image"><img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/08.png" class="" title="This is an image"><br> </li>
+<li>在使用FreeRTOS时，编译会报错。默认情况下，硬件浮点运算是关闭的，需要在CMakeLists里设置一下<img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/09.png" class="" title="This is an image"><br><br>  <strong>取消框选内容的注释就好了。</strong> <br><br>  <img src="/2021/06/14/%E5%8D%95%E7%89%87%E6%9C%BA/%E9%85%8D%E7%BD%AECLion%E5%BC%80%E5%8F%91stm32/10.png" class="" title="This is an image"><br> 
 <br> </li>
 <li><strong>待更新+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</strong></li>
 </ul>
