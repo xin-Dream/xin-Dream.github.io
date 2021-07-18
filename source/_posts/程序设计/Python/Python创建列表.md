@@ -1,11 +1,12 @@
 ---
 title: Python创建列表
-date: 2021-01-28 22:13:35
+date: 2021-05-13 21:16:17
 tags: 
     [Python] 
 categories: 
     [程序设计,Python]
 ---
+
 ```python
 list1=[None]*5
 ```

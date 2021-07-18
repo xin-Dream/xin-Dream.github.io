@@ -6,6 +6,7 @@ tags:
 categories: 
     [程序设计,Android]
 ---
+
 # Gradle sync failed: 你的主机中的软件中止了一个已建立的连接
 
 win10关闭移动热点

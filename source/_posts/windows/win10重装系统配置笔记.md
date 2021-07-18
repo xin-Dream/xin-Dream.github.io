@@ -23,9 +23,9 @@ categories:
 > |[AcrobatDC2021](https://mp.weixin.qq.com/s?__biz=MzA4MjU4MTg2Ng==&mid=2247488913&idx=1&sn=7da31898fb5f6d3510ef398f3c774d38&chksm=9f82d594a8f55c825106ed7b680c326d22fdb6182ff417c11f757e720919f7203ba23757da29&scene=21#wechat_redirect)|[VS2017](https://mp.weixin.qq.com/s?__biz=MzA4MjU4MTg2Ng==&mid=2247488376&idx=2&sn=b292d1ec746c1d52fe92407cd6308556&chksm=9f82d37da8f55a6b41400f7045567be9551e8cf714fcc51d98f544e4e6d9ce10d381cfb9c59f&scene=21#wechat_redirect)|[AD18](https://mp.weixin.qq.com/s?__biz=MzA4MjU4MTg2Ng==&mid=2247488406&idx=4&sn=d11f170b8e7a8fc731ca377d9daa73b6&chksm=9f82d393a8f55a8597003f017ee8a2f22b253eb97a547bebbf65f6108ef382266ddbdd5b4455&scene=21#wechat_redirect)
 
 # 2. 系列链接
-> 1. {% post_link git使用笔记 %}
-> 2. {% post_link hexo配置记录 %}
-> 3. {% post_link Windows配置JAVA环境 %}
+> 1. {% post_link 程序设计/git/git使用笔记 %}
+> 2. {% post_link hexo/hexo配置记录 %}
+> 3. {% post_link windows/windows配置JAVA环境 %}
 > 
 
 

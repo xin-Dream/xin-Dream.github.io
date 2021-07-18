@@ -17,10 +17,10 @@ categories:
    5. [Clion](https://www.jetbrains.com/clion/)（这个可以到Jetbrain申请教育账号，就可以使用专业版了，应该需要一年验证一次）
 
 # 2. 添加环境变量
-    + 将上一步下载的MinGW-w64、gcc-arm-none-eabi、OpenOCD的bin目录添加到环境变量
-    + **D:\052-MinGW\bin**、**D:\053-gcc-arm-none-eabi\bin**、**D:\053-gcc-arm-none-eabi\bin**
-    + 添加过以上环境变量后重启电脑即可生效
-    + 可在命令行使用"gcc -v"、"arm-none-eabi-gcc -v"、"openocd -v"验证
+   + 将上一步下载的MinGW-w64、gcc-arm-none-eabi、OpenOCD的bin目录添加到环境变量
+   + **D:\052-MinGW\bin**、**D:\053-gcc-arm-none-eabi\bin**、**D:\053-gcc-arm-none-eabi\bin**
+   + 添加过以上环境变量后重启电脑即可生效
+   + 可在命令行使用"gcc -v"、"arm-none-eabi-gcc -v"、"openocd -v"验证
 
 # 3. Clion配置
    + {% asset_img 01.png This is an image %}
@@ -59,6 +59,8 @@ source [find target/stm32f4x.cfg]
 
 # 7. 注意事项
    + 在Clion中选择文件时按下图配置，这样在CMakeLists中会是单独一行，如果删除文件后还有残留可以自己查到删除{% asset_img 07.png This is an image %}{% asset_img 08.png This is an image %}
+   <br> 
+   + 在使用FreeRTOS时，编译会报错。默认情况下，硬件浮点运算是关闭的，需要在CMakeLists里设置一下{% asset_img 09.png This is an image %}<br><br>  **取消框选内容的注释就好了。** <br><br>  {% asset_img 10.png This is an image %}
   <br> 
   <br> 
    + **待更新+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++**
