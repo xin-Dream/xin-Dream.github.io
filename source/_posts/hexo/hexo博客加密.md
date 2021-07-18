@@ -25,8 +25,8 @@ encrypt：
 在文章开头添加以下内容
 
 ```bash
-keywords: 博客文章密码
+
 password: # 要设置的密码
-abstract: 密码:# 要设置的密码
+
 message: 输入密码，查看文章
 ```

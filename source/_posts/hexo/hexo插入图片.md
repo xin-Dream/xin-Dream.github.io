@@ -20,7 +20,7 @@ post_asset_folder: true
 
 在文章中使用以下代码即可引用
 ```
-{% asset_img 01.jpg This is an image %}
+{% asset_img 01.png This is an image %}
 ```
 
 # 
