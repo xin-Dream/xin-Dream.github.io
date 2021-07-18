@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    修改文章排序 |  Dream
+    修改文章按更新时间排序 |  Dream
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -62,7 +62,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  修改文章排序
+  修改文章按更新时间排序
 </h1>
  
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">14</span>
+            <span class="post-count">284</span>
         </span>
     </span>
 
@@ -106,7 +106,7 @@
        
   <p><a target="_blank" rel="noopener" href="https://gsy00517.github.io/hexo20200207151318/">hexo笔记：文章排序</a></p>
 <p>还是要多看源码</p>
- 
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">node_modules\hexo-generator-index-pin-top\lib\generator.js</span><br><span class="line"></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line">    <span class="keyword">var</span> pagination = <span class="built_in">require</span>(<span class="string">&#x27;hexo-pagination&#x27;</span>);</span><br><span class="line">    <span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> config = <span class="built_in">this</span>.config;</span><br><span class="line">    <span class="keyword">var</span> posts = locals.posts;</span><br><span class="line">        posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">                <span class="comment">// if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排</span></span><br><span class="line">                <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.updated - a.updated; <span class="comment">// 若top值一样则按照文章更新时间降序排</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">//设置的置顶内容</span></span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// else return b.date - a.date; // 都没定义按照文章日期降序排</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> b.updated - a.updated; <span class="comment">// 都没定义按照文章更新时间降序排</span></span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="keyword">var</span> paginationDir = config.pagination_dir || <span class="string">&#x27;page&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> pagination(<span class="string">&#x27;&#x27;</span>, posts, &#123;</span><br><span class="line">        perPage: config.index_generator.per_page,</span><br><span class="line">        layout: [<span class="string">&#x27;index&#x27;</span>, <span class="string">&#x27;archive&#x27;</span>],</span><br><span class="line">        format: paginationDir + <span class="string">&#x27;/%d/&#x27;</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">        __index: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
